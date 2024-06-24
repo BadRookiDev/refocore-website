@@ -28,7 +28,7 @@
             })();
         </script>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased w-screen overflow-x-hidden">
         @include('_layouts.header')
 
         @yield('body')

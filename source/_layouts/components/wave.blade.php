@@ -1,4 +1,4 @@
-<svg class="relative" viewBox="0 0 1200 40">
+<svg class="relative z-10" viewBox="0 0 1200 40">
     <g class="refo-wave">
         <g>
             <rect class="fill-primary" width="100" height="11"></rect>

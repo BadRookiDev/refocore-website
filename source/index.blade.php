@@ -112,7 +112,7 @@
         <div class="h-2 bg-accent w-1/3 refo-skew-negative"></div>
     </div>
 
-    <section id="track-section" class="bg-slate-600 relative" style="z-index: 1">
+    <section id="track-section" class="bg-slate-600 relative overflow-hidden" style="z-index: 1">
         <img id="geese-rave-img" class="w-full h-full absolute right-0 top-0 object-cover object-bottom opacity-50"
              src="/assets/images/geese_rave.webp" alt="image of raving geese" style="z-index: 0">
 
@@ -157,7 +157,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             new window.SimpleParallax(document.getElementById('geese-rave-img'), {
                 delay: 0.5,
-                scale: 1.25,
+                scale: 1.2,
                 direction: 'up',
                 customContainer: document.getElementById('track-section').nodeValue
             });
