@@ -1,0 +1,31 @@
+.btn{
+    border-radius: 0 !important;
+}
+
+@keyframes neonButtonAnim {
+    0%{
+        border-color: oklch(var(--p));
+    }
+    17%{
+        border-color: oklch(var(--p));
+    }
+    33%{
+        border-color: oklch(var(--s));
+    }
+    49%{
+        border-color: oklch(var(--s));
+    }
+    66%{
+        border-color: oklch(var(--a));
+    }
+    82%{
+        border-color: oklch(var(--a));
+    }
+    100%{
+        border-color: oklch(var(--p));
+    }
+}
+
+.btn-outline-neon{
+    animation: neonButtonAnim 8s linear infinite;
+}

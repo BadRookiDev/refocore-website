@@ -1,0 +1,83 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "waves.css";
+@import "button.css";
+
+.refo-dia-cut{
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media only screen and (min-width : 768px) {
+    .refo-corner-cut{
+        clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 100%, 16px 100%);
+    }
+}
+
+.refo-skew{
+    transform: skew(20deg);
+}
+
+.refo-skew-negative{
+    transform: skew(-20deg);
+}
+
+.text-outline-primary{
+    text-shadow:
+            2px 2px 0 oklch(var(--p)),
+            -2px 2px 0 oklch(var(--p)),
+            -2px -2px 0 oklch(var(--p)),
+            2px -2px 0 oklch(var(--p)),
+            0 0 15px oklch(var(--p))
+}
+
+.text-outline-secondary{
+    text-shadow:
+            2px 2px 0 oklch(var(--s)),
+            -2px 2px 0 oklch(var(--s)),
+            -2px -2px 0 oklch(var(--s)),
+            2px -2px 0 oklch(var(--s)),
+            0 0 15px oklch(var(--s))
+}
+
+.text-outline-accent{
+    text-shadow:
+            2px 2px 0 oklch(var(--a)),
+            -2px 2px 0 oklch(var(--a)),
+            -2px -2px 0 oklch(var(--a)),
+            2px -2px 0 oklch(var(--a)),
+            0 0 15px oklch(var(--a))
+}
+
+.refo-font{
+    font-family: 'Lexend', sans-serif;
+}
+
+#nav-links a:hover > span {
+    color: black !important;
+}
+
+a.hover\:bg-primary > span {
+    text-decoration-color: oklch(var(--p));
+}
+
+a.hover\:bg-secondary > span {
+    text-decoration-color: oklch(var(--s));
+}
+
+a.hover\:bg-accent > span {
+    text-decoration-color: oklch(var(--a));
+}
+
+a.hover\:bg-primary:hover > span {
+    text-decoration-color: oklch(var(--pc));
+}
+
+a.hover\:bg-secondary:hover > span {
+    text-decoration-color: oklch(var(--sc));
+}
+
+a.hover\:bg-accent:hover > span {
+    text-decoration-color: oklch(var(--ac));
+}
