@@ -27,7 +27,7 @@ module.exports = {
                 'accent': "#788eff",
                 'accent-content': "#BCC7FF",
                 'base-100': '#ffffff',
-                'neutral': '#7a8b98'
+                'neutral': '#535357'
             },
             refodark: {
                 'primary': "#e4f03e",
@@ -37,7 +37,7 @@ module.exports = {
                 'accent': "#788eff",
                 'accent-content': "#4F5C9A",
                 'base-100': '#262934',
-                'neutral': '#95afbe'
+                'neutral': '#d8dbe1'
             }
         }]
     },

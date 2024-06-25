@@ -115,12 +115,12 @@
     </div>
 
     <section id="track-section" class="bg-slate-600 relative overflow-hidden" style="z-index: 1">
-        <img id="geese-rave-img" class="h-full object-cover absolute right-0 bottom-0 opacity-50"
+        <img id="geese-rave-img" class="h-full absolute w-screen object-cover opacity-50"
              src="/assets/images/geese_rave.webp" alt="image of raving geese" style="z-index: 0">
 
         <div class="py-32 container mx-auto px-16 relative text-white">
             <p class="text-5xl font-black text-center refo-font">PREPARE FOR <span class="text-black text-outline-primary">THE</span> <span class="text-black text-outline-secondary">ZAAG</span> <span class="text-black text-outline-accent">APOCALYPSE</span>!</p>
-            <h2 class="text-base font-semibold text-center mt-1">Listen to my latest tracks! Follow me on soundcloud, spotify, youtube, whatever.</h2>
+            <h2 class="text-base font-semibold text-center mt-8">Listen to my latest tracks! Follow me on soundcloud, spotify, youtube, whatever.</h2>
 
             <div class="grid grid-cols-1 xl:grid-cols-2 mt-16 gap-16">
                 <div>
