@@ -3,6 +3,8 @@
 @section('body')
     <section class="bg-base-100 relative z-10">
         <div class="h-screen relative bg-base-200/20 dark:bg-base-200 flex items-center">
+            <div class="absolute w-full bottom-0 left-0 bg-base-200 dark:bg-base-300 h-[4px]"></div>
+
             <div class="w-3/5 h-screen absolute right-0 top-0 mr-4 bg-accent refo-dia-cut refo-wave-left" style="animation-delay: 3s"></div>
             <div class="w-3/5 h-screen absolute right-0 top-0 mr-4 bg-secondary refo-dia-cut refo-wave-left" style="animation-delay: 1.5s"></div>
             <div class="w-3/5 h-screen absolute right-0 top-0 mr-4 bg-primary refo-dia-cut refo-wave-left"></div>
@@ -113,7 +115,7 @@
     </div>
 
     <section id="track-section" class="bg-slate-600 relative overflow-hidden" style="z-index: 1">
-        <img id="geese-rave-img" class="w-full h-full absolute right-0 top-0 object-cover object-bottom opacity-50"
+        <img id="geese-rave-img" class="h-full object-cover absolute right-0 bottom-0 opacity-50"
              src="/assets/images/geese_rave.webp" alt="image of raving geese" style="z-index: 0">
 
         <div class="py-32 container mx-auto px-16 relative text-white">
@@ -157,8 +159,8 @@
         document.addEventListener("DOMContentLoaded", () => {
             new window.SimpleParallax(document.getElementById('geese-rave-img'), {
                 delay: 0.5,
-                scale: 1.2,
-                direction: 'up',
+                scale: 1.15,
+                orientation: 'down',
                 customContainer: document.getElementById('track-section').nodeValue
             });
         });

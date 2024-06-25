@@ -81,10 +81,15 @@
     </div>
 </header>
 
-<dialog id="contactModal" class="modal">
-    <div class="modal-box">
-        <h3 class="font-bold text-lg">Hello!</h3>
-        <p class="py-4">Press ESC key or click outside to close</p>
+<dialog id="contactModal" class="modal refo-skew-negative rounded-none">
+    <div class="modal-box rounded-none relative overflow-hidden">
+        <div class="h-screen w-screen absolute top-0 left-0 opacity-10 dark:opacity-20 bg-repeat z-0"
+             style="background-image: url('/assets/images/refocore_text.png'); background-size: auto 20%;"></div>
+
+        <div class="refo-skew px-4">
+            <h3 class="font-bold text-lg">Contact Information</h3>
+            <p class="py-4">Press ESC key or click outside to close</p>
+        </div>
     </div>
 </dialog>
 
