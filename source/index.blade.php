@@ -1,28 +1,36 @@
-@extends('_layouts.main')
+---
+extends: _layouts.main
+title: "Refocore ✝ Home"
+description: "Welcome on my DJ website. Find my latest tracks, info about me & contact details."
+---
 
 @section('body')
     <section class="bg-base-100 relative z-10">
         <div class="h-screen relative bg-base-200/20 dark:bg-base-200 flex items-center">
             <div class="absolute w-full bottom-0 left-0 bg-base-200 dark:bg-base-300 h-[4px]"></div>
 
-            <div class="w-3/5 h-screen absolute right-0 top-0 mr-4 bg-accent refo-dia-cut refo-wave-left" style="animation-delay: 3s"></div>
-            <div class="w-3/5 h-screen absolute right-0 top-0 mr-4 bg-secondary refo-dia-cut refo-wave-left" style="animation-delay: 1.5s"></div>
-            <div class="w-3/5 h-screen absolute right-0 top-0 mr-4 bg-primary refo-dia-cut refo-wave-left"></div>
+            <div class="hidden md:block w-3/5 h-screen absolute right-0 top-0 mr-4 bg-accent refo-dia-cut refo-wave-left" style="animation-delay: 3s"></div>
+            <div class="hidden md:block w-3/5 h-screen absolute right-0 top-0 mr-4 bg-secondary refo-dia-cut refo-wave-left" style="animation-delay: 1.5s"></div>
+            <div class="hidden md:block w-3/5 h-screen absolute right-0 top-0 mr-4 bg-primary refo-dia-cut refo-wave-left"></div>
 
-            <div class="w-3/5 h-screen absolute right-0 top-0 bg-sky-200 refo-dia-cut"></div>
-            <img class="w-3/5 h-screen absolute right-0 top-0 object-cover object-left z-0 refo-dia-cut opacity-70"
+            <div class="w-screen md:w-3/5 h-screen absolute right-0 top-0 bg-sky-200 refo-dia-cut landing-img"></div>
+            <img class="w-screen md:w-3/5 h-screen absolute right-0 top-0 object-cover object-left z-0 refo-dia-cut opacity-70 landing-img"
                  src="/assets/images/geese.webp" alt="image of geese with saws">
 
             <div class="container mx-auto px-16 relative">
-                <div class="w-1/2 pr-24">
-                    <h1 class="text-3xl md:text-5xl lg:text-7xl font-black refo-font">
-                        I AM <span class="text-outline-primary text-black/75">✟</span> <br>
+                <div class="w-full md:w-1/2 md:pr-24">
+                    <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black refo-font text-black md:dark:text-white">
+                        I AM <span class="text-outline-primary text-black/75">✟</span> <br class="hidden md:block">
                         <span class="text-outline-secondary text-black/75">REFO</span><span class="text-outline-accent text-black/75">CORE</span>
                     </h1>
 
-                    <p class="mt-8 font-semibold italic">
+                    <p class="mt-8 font-semibold italic bg-base-100/50 md:bg-transparent p-2 md:p-0 backdrop-blur-sm">
                         "I make <span>noise</span>, lots of it, very fast and VERY VERY LOUD."
                     </p>
+
+                    <div class="grid grid-cols-5 md:flex gap-4 flex-1 w-full mt-8">
+                        @include('_layouts.components.social-links')
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,7 +79,7 @@
                 <h2 class="text-2xl font-bold text-center refo-font">Did you know that i occasionally post <span class="bg-primary text-black px-2 pb-0.5">kick</span> <span class="bg-secondary text-black px-2 pb-0.5">samples</span> & <span class="bg-accent text-black px-2 pb-0.5">packs</span> on
                     <a class="link" href="https://bangerly.com/communitycontent/artists/refocore" target="_blank" rel="noopener">Bangerly</a>?</h2>
 
-                <div class="grid grid-cols-6 md:grid-cols-9 lg:grid-cols-8 xl:grid-cols-6 gap-16 mt-16">
+                <div class="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-9 lg:grid-cols-8 xl:grid-cols-6 sm:gap-x-16 gap-y-16 mt-16">
 
                     <div class="drop-shadow-xl block col-span-6 md:col-span-5 lg:col-span-4 xl:col-span-2">
                         @include('_layouts.components.sample',
@@ -119,7 +127,7 @@
              src="/assets/images/geese_rave.webp" alt="image of raving geese" style="z-index: 0">
 
         <div class="py-32 container mx-auto px-16 relative text-white">
-            <p class="text-5xl font-black text-center refo-font">PREPARE FOR <span class="text-black text-outline-primary">THE</span> <span class="text-black text-outline-secondary">ZAAG</span> <span class="text-black text-outline-accent">APOCALYPSE</span>!</p>
+            <p class="text-3xl sm:text-5xl font-black text-center refo-font">PREPARE FOR <span class="text-black text-outline-primary">THE</span> <span class="text-black text-outline-secondary">ZAAG</span> <span class="text-black text-outline-accent">APOCALYPSE</span>!</p>
             <h2 class="text-base font-semibold text-center mt-8">Listen to my latest tracks! Follow me on soundcloud, spotify, youtube, whatever.</h2>
 
             <div class="grid grid-cols-1 xl:grid-cols-2 mt-16 gap-16">

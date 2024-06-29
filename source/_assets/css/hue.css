@@ -1,0 +1,40 @@
+@keyframes flipFooterLogo {
+    0% {
+
+        background: oklch(var(--p));
+    }
+    11% {
+        background: oklch(var(--p));
+    }
+    22%{
+        background: oklch(var(--s));
+    }
+
+    33%{
+        background: oklch(var(--s));
+    }
+    44%{
+        background: oklch(var(--s));
+    }
+    55%{
+        background: oklch(var(--a));
+    }
+
+    66%{
+        background: oklch(var(--a));
+    }
+    77%{
+        background: oklch(var(--a));
+    }
+    88%{
+        background: oklch(var(--p));
+    }
+
+    100%{
+        background: oklch(var(--p));
+    }
+}
+
+.hue-logo{
+    animation: flipFooterLogo 12s linear infinite;
+}

@@ -4,6 +4,37 @@
 
 @import "waves.css";
 @import "button.css";
+@import "hue.css";
+
+@media screen and (max-width: 440px) {
+    .responsive-navbar {
+        display: block !important;
+    }
+
+    #nav-links, #nav-controls {
+        justify-content: space-around;
+    }
+
+    #nav-controls {
+        padding-bottom: 20px;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+
+    #nav-controls button {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .landing-img.refo-dia-cut{
+        clip-path: none !important;
+    }
+}
+
+#nav-controls button:active {
+    margin-right: 5px;
+}
 
 .refo-dia-cut{
     clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);

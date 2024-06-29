@@ -8,6 +8,8 @@
         <meta name="description" content="{{ $page->description }}">
         <title>{{ $page->title }}</title>
 
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=lexend:400,500,600,700,800,900" rel="stylesheet"/>
 
@@ -28,7 +30,7 @@
             })();
         </script>
     </head>
-    <body class="font-sans antialiased w-screen overflow-x-hidden">
+    <body class="font-sans antialiased w-screen overflow-x-hidden relative">
         @include('_layouts.header')
 
         @yield('body')
