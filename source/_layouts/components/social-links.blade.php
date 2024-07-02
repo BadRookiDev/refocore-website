@@ -10,6 +10,6 @@
 <a class="w-8 sm:w-10 md:w-8 lg:w-10 xl:w-12"  aria-label="Tiktok" href="https://www.tiktok.com/@refocore" target="_blank" rel="noopener">
     @include('_layouts.social-icons.tiktok')
 </a>
-<a class="w-8 sm:w-10 md:w-8 lg:w-10 xl:w-12"  aria-label="Instagram" target="_blank" rel="noopener">
+<a class="w-8 sm:w-10 md:w-8 lg:w-10 xl:w-12"  aria-label="Instagram" href="https://www.instagram.com/refo.core" target="_blank" rel="noopener">
     @include('_layouts.social-icons.instagram')
 </a>

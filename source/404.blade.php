@@ -2,6 +2,8 @@
 extends: _layouts.main
 title: "Refocore ✝ 404"
 description: "Whatever you searched, it does not exist."
+section: body
+permalink: 404.html
 ---
 
 @section('body')
