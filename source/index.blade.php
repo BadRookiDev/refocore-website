@@ -36,6 +36,7 @@ description: "Welcome on my DJ website. Find my latest tracks, info about me & c
         </div>
     </section>
 
+    @if(false)
     <section class="bg-base-100 z-10 relative">
         <div class="relative bg-base-200/20 dark:bg-base-200">
             <script>
@@ -115,6 +116,21 @@ description: "Welcome on my DJ website. Find my latest tracks, info about me & c
             </div>
         </div>
     </section>
+    @else
+        <section class="bg-base-100 z-10 relative">
+            <div class="relative bg-base-200/20 dark:bg-base-200">
+                <div class="py-32 container mx-auto px-16 relative">
+                    <h2 class="text-2xl font-bold text-center refo-font">Did you know that i occasionally post <span class="bg-primary text-black px-2 pb-0.5">kick</span> <span class="bg-secondary text-black px-2 pb-0.5">samples</span> & <span class="bg-accent text-black px-2 pb-0.5">packs</span> on
+                        <span style="text-decoration: line-through">REDACTED</span>?</h2>
+
+                    <p class="mt-16">
+                        Yeah well, I have my own online music platform, but it is going through a major update.
+                        This section will be updated once it is ready (again).
+                    </p>
+                </div>
+            </div>
+        </section>
+    @endif
 
     <div class="flex z-10 relative">
         <div class="h-2 bg-primary w-1/3 refo-skew-negative"></div>
@@ -123,8 +139,8 @@ description: "Welcome on my DJ website. Find my latest tracks, info about me & c
     </div>
 
     <section id="track-section" class="bg-slate-600 relative overflow-hidden" style="z-index: 1">
-        <img id="geese-rave-img" class="h-full absolute w-screen object-cover opacity-50"
-             src="/assets/images/geese_rave.webp" alt="image of raving geese" style="z-index: 0">
+        <img id="geese-rave-img" class="h-full absolute w-screen object-cover opacity-75 grayscale-[33%] hue-rotate-[20deg]"
+             src="/assets/images/defqon1.jpg" alt="defqon 1" style="z-index: 0">
 
         <div class="py-32 container mx-auto px-16 relative text-white">
             <p class="text-3xl sm:text-5xl font-black text-center refo-font">PREPARE FOR <span class="text-black text-outline-primary">THE</span> <span class="text-black text-outline-secondary">ZAAG</span> <span class="text-black text-outline-accent">APOCALYPSE</span>!</p>
@@ -132,30 +148,15 @@ description: "Welcome on my DJ website. Find my latest tracks, info about me & c
 
             <div class="grid grid-cols-1 xl:grid-cols-2 mt-16 gap-16">
                 <div>
-                    @include('_layouts.components.soundcloud', [
-                        'hexColor' => 'e4f03e',
-                        'trackId' => '1796105572',
-                        'trackUrl' => 'https://soundcloud.com/refocore/el-sonidito-refocore-uptempo-remix',
-                        'trackTitle' => 'Hechizeros Band - El Sonidito (Refocore Remix)'
-                    ])
+                    @include('_layouts.components.soundcloud', ['hexColor' => 'e4f03e','trackId' => '1976147643'])
                 </div>
 
                 <div>
-                    @include('_layouts.components.soundcloud', [
-                        'hexColor' => '3ef0ea',
-                        'trackId' => '1834758972',
-                        'trackUrl' => 'https://soundcloud.com/refocore/pointer-sisters-im-so-excited',
-                        'trackTitle' => "Pointer Sisters - I'm So Excited (Refocore Remix)"
-                    ])
+                    @include('_layouts.components.soundcloud', ['hexColor' => '3ef0ea','trackId' => '1952789399'])
                 </div>
 
                 <div class="xl:col-span-2">
-                    @include('_layouts.components.soundcloud', [
-                        'hexColor' => '788eff',
-                        'trackId' => '1703137761',
-                        'trackUrl' => 'https://soundcloud.com/refocore/flo-rida-right-round-refocore-remix',
-                        'trackTitle' => 'Flo Rida - Right Round (Refocore Remix)'
-                    ])
+                    @include('_layouts.components.soundcloud', ['hexColor' => '788eff','trackId' => '1703137761'])
                 </div>
             </div>
         </div>

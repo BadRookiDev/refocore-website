@@ -8,7 +8,7 @@ permalink: 404.html
 
 @section('body')
     <div class="relative">
-        <img src="/assets/images/geese_404.webp" alt="raving geese 404" class="absolute w-full h-full object-cover">
+        <img src="/assets/images/defqon1_stage.jpg" alt="defqon 1 background" class="absolute w-full h-full object-cover">
         <div class="absolute w-full h-full left-0 top-0 z-10 bg-slate-400 opacity-45 dark:bg-slate-800 dark:opacity-65"></div>
 
         <div class="py-32 container mx-auto px-16 relative">

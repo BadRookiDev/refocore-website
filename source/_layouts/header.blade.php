@@ -5,17 +5,18 @@
             <div class="refo-skew w-full flex responsive-navbar">
 
                 <div class="flex-1 flex" id="nav-links">
-                    <a href="/" class="flex hover:bg-primary h-16 w-fit px-4 refo-skew-negative items-center
+                    <a href="/downloads" class="flex hover:bg-primary h-16 w-fit px-4 refo-skew-negative items-center
                     transition-colors duration-200 cursor-pointer tooltip tooltip-bottom tooltip-primary
-                    lg:before:!hidden lg:after:!hidden before:text-black/50" data-tip="Home" aria-label="HOME">
+                    lg:before:!hidden lg:after:!hidden before:text-black/50 z-50 relative" data-tip="Downloads"
+                       aria-label="DOWNLOADS">
                         <span class="refo-skew font-black inline-block link underline-offset-4 cursor-pointer">
-                            <span class="lg:hidden">🏠</span><span class="hidden lg:inline refo-font">REFOCORE</span>
+                            <span class="lg:hidden">⬇️</span><span class="hidden lg:inline refo-font">DOWNLOADS</span>
                         </span>
                     </a>
 
                     <a href="/about-me/" class="flex hover:bg-secondary h-16 w-fit px-4 refo-skew-negative items-center
                     transition-colors duration-200 cursor-pointer tooltip tooltip-bottom tooltip-secondary
-                    lg:before:!hidden lg:after:!hidden before:text-black/50" data-tip="About Me" aria-label="ABOUT ME">
+                    lg:before:!hidden lg:after:!hidden before:text-black/50 z-50 relative" data-tip="About Me" aria-label="ABOUT ME">
                         <span class="refo-skew font-black inline-block link underline-offset-4 cursor-pointer">
                             <span class="lg:hidden">🙋🏻‍♂️</span><span class="hidden lg:inline refo-font">ABOUT ME</span>
                         </span>
@@ -23,23 +24,27 @@
 
                     <a href="/my-style/" class="flex hover:bg-accent h-16 w-fit px-4 refo-skew-negative items-center
                     transition-colors duration-200 cursor-pointer tooltip tooltip-bottom tooltip-accent
-                    lg:before:!hidden lg:after:!hidden before:text-black/50" data-tip="Style & Production" aria-label="STYLE & PRODUCTION">
+                    lg:before:!hidden lg:after:!hidden before:text-black/50 z-50 relative" data-tip="MUSIC STYLE"
+                       aria-label="MUSIC STYLE">
                         <span class="refo-skew font-black inline-block link underline-offset-4 cursor-pointer">
-                            <span class="lg:hidden">🪚</span><span class="hidden lg:inline refo-font">STYLE & PRODUCTION</span>
+                            <span class="lg:hidden">🪚</span><span class="hidden lg:inline refo-font">MUSIC STYLE</span>
                         </span>
                     </a>
                 </div>
 
                 <div class="flex-none flex items-center px-2 gap-x-8" id="nav-controls">
+                    <a class="block" href="/" aria-label="Home">
+                        <svg class="fill-black dark:fill-white w-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27 18.039L16 9.501 5 18.039V14.56l11-8.54 11 8.538v3.481zm-2.75-.31v8.251h-5.5v-5.5h-5.5v5.5h-5.5v-8.25L16 11.543l8.25 6.186z"></path>
+                        </svg>
+                    </a>
+
                     <label class="swap swap-rotate sm:hidden" aria-label="light/dark switch">
                         <input type="checkbox" class="theme-controller" onchange="changeTheme(this.checked)"/>
 
-                        <svg
-                                class="swap-off h-5 w-5 fill-current"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24">
-                            <path
-                                    d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                        <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 24 24">
+                            <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
                         </svg>
 
                         <svg
@@ -47,24 +52,25 @@
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24">
                             <path
-                                    d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                                    d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>
                         </svg>
                     </label>
 
                     <label class="hidden md:flex cursor-pointer gap-2" aria-label="light/dark switch">
-                        <span class="label-text font-bold refo-font text-black dark:text-white">
+                        <span class="label-text font-bold refo-font text-black dark:text-white mt-0.5">
                             Light
                         </span>
                         <input onchange="changeTheme(this.checked)" type="checkbox"
-                               class="toggle theme-controller !bg-gradient-to-r !from-primary !via-secondary !to-accent border-black dark:border-white" />
-                        <span class="label-text font-bold refo-font text-black dark:text-white">
+                               class="toggle theme-controller !bg-gradient-to-r !from-primary !via-secondary !to-accent border-black dark:border-white"/>
+                        <span class="label-text font-bold refo-font text-black dark:text-white mt-0.5">
                             Dark
                         </span>
                     </label>
 
-                    <label class="hidden sm:grid md:hidden cursor-pointer place-items-center" aria-label="light/dark switch">
+                    <label class="hidden sm:grid md:hidden cursor-pointer place-items-center"
+                           aria-label="light/dark switch">
                         <input onchange="changeTheme(this.checked)" type="checkbox"
-                                class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
+                               class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1"/>
                         <svg
                                 class="stroke-base-100 fill-base-100 col-start-1 row-start-1"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -76,9 +82,9 @@
                                 stroke-width="2"
                                 stroke-linecap="round"
                                 stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5" />
+                            <circle cx="12" cy="12" r="5"/>
                             <path
-                                    d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                                    d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/>
                         </svg>
                         <svg
                                 class="stroke-base-100 fill-base-100 col-start-2 row-start-1"
@@ -96,7 +102,7 @@
                     </label>
 
                     <button class="btn btn-outline btn-outline-neon refo-skew-negative hover:bg-transparent hover:text-black dark:hover:!text-white"
-                    onclick="document.getElementById('contactModal').showModal();" aria-label="contact dialog">
+                            onclick="document.getElementById('contactModal').showModal();" aria-label="contact dialog">
                         <svg viewBox="0 0 512 512" class="w-10 h-10 fill-neutral inline sm:hidden" xml:space="preserve"
                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path d="M304.7,325.9H105.6c-4.7,0-8.6-3.8-8.6-8.6V155c0-4.7,3.8-8.6,8.6-8.6H356c4.7,0,8.6,3.8,8.6,8.6v103.8 c0,4.7-3.8,8.6-8.6,8.6s-8.6-3.8-8.6-8.6v-95.3H114.2v145.2h190.5c4.7,0,8.6,3.8,8.6,8.6C313.2,322.1,309.4,325.9,304.7,325.9z"></path>
@@ -122,8 +128,9 @@
                 <p class="font-bold text-lg">Contact Information</p>
                 <form method="dialog">
                     <button class="text-black dark:text-white" aria-label="close contact dialog">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
                         </svg>
                     </button>
                 </form>
@@ -141,14 +148,14 @@
         el.checked = preferredThemeOnInit === 'refodark';
     });
 
-    function changeTheme(isChecked){
+    function changeTheme(isChecked) {
         const newTheme = isChecked ? 'refodark' : 'refotheme';
         localStorage.setItem("refoTheme", newTheme);
         document.documentElement.setAttribute('data-theme', newTheme);
         document.documentElement.classList.toggle('dark');
         console.log("CHANGE DETECTED");
         document.querySelectorAll('.theme-controller').forEach(el => {
-           el.checked = isChecked;
+            el.checked = isChecked;
         });
     }
 </script>

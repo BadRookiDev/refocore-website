@@ -7,17 +7,23 @@ description: "All the necessary and unnecesarry information about me, my music c
 @section('body')
     <div class="py-32 overflow-hidden relative dark:bg-base-200" id="about-me-section">
         <div class="z-10 relative">
-            <h1 class="text-7xl text-black font-black refo-font text-center mt-16 z-10">
-                <span class="text-outline-primary text-black/75">ABOUT</span><br>
-                <span class="text-outline-secondary text-black/75">✟</span>
-                <span class="text-outline-accent text-black/75">ME</span>
+            <h1 class="text-7xl font-black refo-font text-center mt-16 z-10 text-black dark:text-white">
+                <span class="text-primary">
+                    ALL
+                </span>
+                <span class="text-secondary">
+                    ABOUT
+                </span>
+                <span class="text-accent">
+                    ME
+                </span>
             </h1>
         </div>
 
         <div class="z-0">
-            <img class="absolute top-0 left-0 z-0 w-screen dark:opacity-60 h-full object-cover"
-                 src="/assets/images/church_geese.webp" id="geese-village-img" alt="geese in a christian farmer village">
-            <div class="absolute w-full h-full left-0 top-0 z-0 bg-sky-200 opacity-30 dark:opacity-10"></div>
+            <img class="absolute bottom-0 left-0 z-0 w-screen dark:opacity-60 h-full object-cover"
+                 src="/assets/images/geese_at_day.jpg" id="geese-village-img" alt="just a regular goose chilling in the grass">
+            <div class="absolute w-full h-full left-0 top-0 z-0 bg-sky-200 opacity-20 dark:opacity-10"></div>
         </div>
     </div>
 
