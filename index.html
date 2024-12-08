@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=lexend:400,500,600,700,800,900" rel="stylesheet"/>
 
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=05e9530549f21d0ee97560e142c1c583">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=7dd50db033ecedc687de9b6c6d4a1a2d">
         <script defer src="/assets/build/js/main.js?id=5fd2d0d29a02b45434e3a9ca31329d0c"></script>
 
         <script>
@@ -38,17 +38,18 @@
             <div class="refo-skew w-full flex responsive-navbar">
 
                 <div class="flex-1 flex" id="nav-links">
-                    <a href="/" class="flex hover:bg-primary h-16 w-fit px-4 refo-skew-negative items-center
+                    <a href="/downloads" class="flex hover:bg-primary h-16 w-fit px-4 refo-skew-negative items-center
                     transition-colors duration-200 cursor-pointer tooltip tooltip-bottom tooltip-primary
-                    lg:before:!hidden lg:after:!hidden before:text-black/50" data-tip="Home" aria-label="HOME">
+                    lg:before:!hidden lg:after:!hidden before:text-black/50 z-50 relative" data-tip="Downloads"
+                       aria-label="DOWNLOADS">
                         <span class="refo-skew font-black inline-block link underline-offset-4 cursor-pointer">
-                            <span class="lg:hidden">🏠</span><span class="hidden lg:inline refo-font">REFOCORE</span>
+                            <span class="lg:hidden">⬇️</span><span class="hidden lg:inline refo-font">DOWNLOADS</span>
                         </span>
                     </a>
 
                     <a href="/about-me/" class="flex hover:bg-secondary h-16 w-fit px-4 refo-skew-negative items-center
                     transition-colors duration-200 cursor-pointer tooltip tooltip-bottom tooltip-secondary
-                    lg:before:!hidden lg:after:!hidden before:text-black/50" data-tip="About Me" aria-label="ABOUT ME">
+                    lg:before:!hidden lg:after:!hidden before:text-black/50 z-50 relative" data-tip="About Me" aria-label="ABOUT ME">
                         <span class="refo-skew font-black inline-block link underline-offset-4 cursor-pointer">
                             <span class="lg:hidden">🙋🏻‍♂️</span><span class="hidden lg:inline refo-font">ABOUT ME</span>
                         </span>
@@ -56,23 +57,27 @@
 
                     <a href="/my-style/" class="flex hover:bg-accent h-16 w-fit px-4 refo-skew-negative items-center
                     transition-colors duration-200 cursor-pointer tooltip tooltip-bottom tooltip-accent
-                    lg:before:!hidden lg:after:!hidden before:text-black/50" data-tip="Style & Production" aria-label="STYLE & PRODUCTION">
+                    lg:before:!hidden lg:after:!hidden before:text-black/50 z-50 relative" data-tip="MUSIC STYLE"
+                       aria-label="MUSIC STYLE">
                         <span class="refo-skew font-black inline-block link underline-offset-4 cursor-pointer">
-                            <span class="lg:hidden">🪚</span><span class="hidden lg:inline refo-font">STYLE & PRODUCTION</span>
+                            <span class="lg:hidden">🪚</span><span class="hidden lg:inline refo-font">MUSIC STYLE</span>
                         </span>
                     </a>
                 </div>
 
                 <div class="flex-none flex items-center px-2 gap-x-8" id="nav-controls">
+                    <a class="block" href="/" aria-label="Home">
+                        <svg class="fill-black dark:fill-white w-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27 18.039L16 9.501 5 18.039V14.56l11-8.54 11 8.538v3.481zm-2.75-.31v8.251h-5.5v-5.5h-5.5v5.5h-5.5v-8.25L16 11.543l8.25 6.186z"></path>
+                        </svg>
+                    </a>
+
                     <label class="swap swap-rotate sm:hidden" aria-label="light/dark switch">
                         <input type="checkbox" class="theme-controller" onchange="changeTheme(this.checked)"/>
 
-                        <svg
-                                class="swap-off h-5 w-5 fill-current"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24">
-                            <path
-                                    d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                        <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 24 24">
+                            <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
                         </svg>
 
                         <svg
@@ -80,24 +85,25 @@
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24">
                             <path
-                                    d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                                    d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>
                         </svg>
                     </label>
 
                     <label class="hidden md:flex cursor-pointer gap-2" aria-label="light/dark switch">
-                        <span class="label-text font-bold refo-font text-black dark:text-white">
+                        <span class="label-text font-bold refo-font text-black dark:text-white mt-0.5">
                             Light
                         </span>
                         <input onchange="changeTheme(this.checked)" type="checkbox"
-                               class="toggle theme-controller !bg-gradient-to-r !from-primary !via-secondary !to-accent border-black dark:border-white" />
-                        <span class="label-text font-bold refo-font text-black dark:text-white">
+                               class="toggle theme-controller !bg-gradient-to-r !from-primary !via-secondary !to-accent border-black dark:border-white"/>
+                        <span class="label-text font-bold refo-font text-black dark:text-white mt-0.5">
                             Dark
                         </span>
                     </label>
 
-                    <label class="hidden sm:grid md:hidden cursor-pointer place-items-center" aria-label="light/dark switch">
+                    <label class="hidden sm:grid md:hidden cursor-pointer place-items-center"
+                           aria-label="light/dark switch">
                         <input onchange="changeTheme(this.checked)" type="checkbox"
-                                class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
+                               class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1"/>
                         <svg
                                 class="stroke-base-100 fill-base-100 col-start-1 row-start-1"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -109,9 +115,9 @@
                                 stroke-width="2"
                                 stroke-linecap="round"
                                 stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5" />
+                            <circle cx="12" cy="12" r="5"/>
                             <path
-                                    d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                                    d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/>
                         </svg>
                         <svg
                                 class="stroke-base-100 fill-base-100 col-start-2 row-start-1"
@@ -129,7 +135,7 @@
                     </label>
 
                     <button class="btn btn-outline btn-outline-neon refo-skew-negative hover:bg-transparent hover:text-black dark:hover:!text-white"
-                    onclick="document.getElementById('contactModal').showModal();" aria-label="contact dialog">
+                            onclick="document.getElementById('contactModal').showModal();" aria-label="contact dialog">
                         <svg viewBox="0 0 512 512" class="w-10 h-10 fill-neutral inline sm:hidden" xml:space="preserve"
                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path d="M304.7,325.9H105.6c-4.7,0-8.6-3.8-8.6-8.6V155c0-4.7,3.8-8.6,8.6-8.6H356c4.7,0,8.6,3.8,8.6,8.6v103.8 c0,4.7-3.8,8.6-8.6,8.6s-8.6-3.8-8.6-8.6v-95.3H114.2v145.2h190.5c4.7,0,8.6,3.8,8.6,8.6C313.2,322.1,309.4,325.9,304.7,325.9z"></path>
@@ -155,8 +161,9 @@
                 <p class="font-bold text-lg">Contact Information</p>
                 <form method="dialog">
                     <button class="text-black dark:text-white" aria-label="close contact dialog">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
                         </svg>
                     </button>
                 </form>
@@ -164,14 +171,14 @@
 
             <ul class="menu w-full !p-0 mt-4">
                 <li>
-    <a class="!rounded-none" href="mailto:contact@refocore.top" target="_blank" rel="noopener">
+    <a class="!rounded-none" href="mailto:info@refocore.top" target="_blank" rel="noopener">
         <img width="20" height="20" loading="lazy" class="dark:invert rounded-sm !w-5 h-5 !min-w-5" style="max-width: 20px !important;"
              src="/assets/images/signature_tiny.jpg" alt="refocore logo">
-        Email to contact@refocore.top
+        Email to info@refocore.top
     </a>
 </li>
 <li>
-    <a class="!rounded-none" target="_blank" rel="noopener">
+    <a class="!rounded-none" target="_blank" rel="noopener" href="https://www.instagram.com/refo.core">
         <div class="inline-block w-5 h-5">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" class="w-full">
     <rect width="512" height="512" rx="15%" id="b"></rect>
@@ -197,7 +204,7 @@
     </a>
 </li>
 <li>
-    <a class="!rounded-none" target="_blank" rel="noopener">
+    <a class="!rounded-none" target="_blank" rel="noopener" href="https://www.tiktok.com/@refocore">
         <div class="inline-block w-5 h-5">
             <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" class="w-full">
     <path d="M25 0h200c13.808 0 25 11.192 25 25v200c0 13.808-11.192 25-25 25H25c-13.808 0-25-11.192-25-25V25C0 11.192 11.192 0 25 0z"
@@ -223,7 +230,7 @@
     </a>
 </li>
 <li>
-    <a class="!rounded-none" target="_blank" rel="noopener">
+    <a class="!rounded-none" target="_blank" rel="noopener" href="https://soundcloud.com/refocore">
         <div class="inline-block w-5 h-5">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 512 512">
     <rect width="512" height="512" rx="15%" fill="#f50"></rect>
@@ -243,14 +250,14 @@
         el.checked = preferredThemeOnInit === 'refodark';
     });
 
-    function changeTheme(isChecked){
+    function changeTheme(isChecked) {
         const newTheme = isChecked ? 'refodark' : 'refotheme';
         localStorage.setItem("refoTheme", newTheme);
         document.documentElement.setAttribute('data-theme', newTheme);
         document.documentElement.classList.toggle('dark');
         console.log("CHANGE DETECTED");
         document.querySelectorAll('.theme-controller').forEach(el => {
-           el.checked = isChecked;
+            el.checked = isChecked;
         });
     }
 </script>
@@ -285,7 +292,7 @@
     <path d="m59 270-3 22 3 22c0 2 3 2 3 0l3-22-3-22c0-3-3-3-3 0zm18-14c0-3-3-3-3 0l-5 36 4 35c0 3 4 3 4 0l4-35zm59-30-3 66 2 40c0 8 7 8 7 0l4-40-4-66c0-5-6-5-6 0zm-31 22-4 44 3 40c0 6 5 6 5 0l4-40-4-44c0-3-4-3-4 0zm70 84 3-40-3-88c0-6-7-6-7 0l-3 88 2 40c0 8 8 8 8 0zm68 0 2-40-2-102c0-7-10-7-10 0l-2 102 2 40c0 8 10 8 10 0zm-34 0 3-40-3-89c0-6-9-6-9 0l-2 89 2 40c0 8 9 8 9 0zm-83 0 3-40-3-41c0-3-6-3-6 0l-3 41 3 40c0 7 6 7 6 0zm-33 0 4-40-4-43c0-3-4-3-4 0l-4 43 4 40c0 4 4 4 4 0zm124-125-2 85 1 40c0 8 10 8 10 0l2-40-2-85c0-7-9-7-9 0zm-58 125 3-40-3-81c0-6-7-6-7 0l-3 81 2 40c0 8 8 8 8 0zm33 0 3-40-3-91c0-6-8-6-8 0l-3 91 3 40c0 8 8 8 8 0zm196-89c-5-57-64-94-118-73-4 2-5 3-5 6v156c0 3 2 6 5 6h137c27 0 49-22 49-49 0-37-35-57-68-46zm-138-62-3 111 3 40c0 8 10 8 10 0l3-40-3-111c0-7-10-7-10 0z" fill="#ffffff"></path>
 </svg>
 </a>
-<a class="w-8 sm:w-10 md:w-8 lg:w-10 xl:w-12"  aria-label="Spotify" target="_blank" rel="noopener">
+<a class="w-8 sm:w-10 md:w-8 lg:w-10 xl:w-12" href="https://open.spotify.com/artist/0bXQrjnqNy5m6o2g1iGWlj" aria-label="Spotify" target="_blank" rel="noopener">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 512 512">
     <rect width="512" height="512" rx="15%" fill="#3bd75f"></rect>
     <circle cx="256" cy="256" fill="#ffffff" r="192"></circle>
@@ -349,194 +356,20 @@
         </div>
     </section>
 
-    <section class="bg-base-100 z-10 relative">
-        <div class="relative bg-base-200/20 dark:bg-base-200">
-            <script>
-                function setAudioHandler(elementsIdPrefix){
-                    let audioTime = document.getElementById(elementsIdPrefix+"-time");
-                    let audioElement = document.getElementById(elementsIdPrefix+"-audio");
-                    let ctrl = document.getElementById(elementsIdPrefix+"-button");
-                    let audioPause = true;
-                    let intervalId;
+            <section class="bg-base-100 z-10 relative">
+            <div class="relative bg-base-200/20 dark:bg-base-200">
+                <div class="py-32 container mx-auto px-16 relative">
+                    <h2 class="text-2xl font-bold text-center refo-font">Did you know that i occasionally post <span class="bg-primary text-black px-2 pb-0.5">kick</span> <span class="bg-secondary text-black px-2 pb-0.5">samples</span> & <span class="bg-accent text-black px-2 pb-0.5">packs</span> on
+                        <span style="text-decoration: line-through">REDACTED</span>?</h2>
 
-                    function audioSwitch() {
-                        audioPause = !audioPause;
-                        ctrl.innerHTML = audioPause ?
-                            '<svg viewBox="0 0 24 24" class="w-7 sm:w-10 md:w-5 lg:w-8 xl:w-6" xmlns="http://www.w3.org/2000/svg"> <path class="fill-accent" fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 10.9648 22.4695 9.92953 21.4086 9.35258L8.59661 2.38548C6.53435 1.26402 4 2.72368 4 5.0329L4 12H23Z"></path> <path class="fill-secondary" d="M8.59662 21.6145L21.4086 14.6474C22.4695 14.0705 23 13.0352 23 12H4L4 18.9671C4 21.2763 6.53435 22.736 8.59662 21.6145Z"></path> </svg>' :
-                            '<svg viewBox="0 0 24 24" class="w-7 sm:w-10 md:w-5 lg:w-8 xl:w-6" xmlns="http://www.w3.org/2000/svg"> <path class="fill-accent" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"></path> <path class="fill-secondary" d="M8.07612 8.61732C8 8.80109 8 9.03406 8 9.5V14.5C8 14.9659 8 15.1989 8.07612 15.3827C8.17761 15.6277 8.37229 15.8224 8.61732 15.9239C8.80109 16 9.03406 16 9.5 16C9.96594 16 10.1989 16 10.3827 15.9239C10.6277 15.8224 10.8224 15.6277 10.9239 15.3827C11 15.1989 11 14.9659 11 14.5V9.5C11 9.03406 11 8.80109 10.9239 8.61732C10.8224 8.37229 10.6277 8.17761 10.3827 8.07612C10.1989 8 9.96594 8 9.5 8C9.03406 8 8.80109 8 8.61732 8.07612C8.37229 8.17761 8.17761 8.37229 8.07612 8.61732Z"></path> <path class="fill-secondary" d="M13.0761 8.61732C13 8.80109 13 9.03406 13 9.5V14.5C13 14.9659 13 15.1989 13.0761 15.3827C13.1776 15.6277 13.3723 15.8224 13.6173 15.9239C13.8011 16 14.0341 16 14.5 16C14.9659 16 15.1989 16 15.3827 15.9239C15.6277 15.8224 15.8224 15.6277 15.9239 15.3827C16 15.1989 16 14.9659 16 14.5V9.5C16 9.03406 16 8.80109 15.9239 8.61732C15.8224 8.37229 15.6277 8.17761 15.3827 8.07612C15.1989 8 14.9659 8 14.5 8C14.0341 8 13.8011 8 13.6173 8.07612C13.3723 8.17761 13.1776 8.37229 13.0761 8.61732Z"></path> </svg>';
-                        let method = audioPause ? 'pause' : 'play';
-
-                        if (audioPause) {
-                            clearInterval(intervalId);
-                        } else {
-                            intervalId = setInterval(() => {
-                                audioTime.innerText = Math.ceil(audioElement.currentTime)+"s";
-                            }, 1000);
-                        }
-
-                        audioElement[method]();
-
-                        return false;
-                    }
-
-                    ctrl.onclick = audioSwitch;
-                    audioElement.addEventListener('ended', function (){
-                        clearInterval(intervalId);
-                        audioTime.innerText = "0s";
-                        audioSwitch();
-                    });
-                }
-            </script>
-
-            <div class="py-32 container mx-auto px-16 relative">
-                <h2 class="text-2xl font-bold text-center refo-font">Did you know that i occasionally post <span class="bg-primary text-black px-2 pb-0.5">kick</span> <span class="bg-secondary text-black px-2 pb-0.5">samples</span> & <span class="bg-accent text-black px-2 pb-0.5">packs</span> on
-                    <a class="link" href="https://bangerly.com/communitycontent/artists/refocore" target="_blank" rel="noopener">Bangerly</a>?</h2>
-
-                <div class="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-9 lg:grid-cols-8 xl:grid-cols-6 sm:gap-x-16 gap-y-16 mt-16">
-
-                    <div class="drop-shadow-xl block col-span-6 md:col-span-5 lg:col-span-4 xl:col-span-2">
-                        <div class="card card-side bg-base-100 rounded-none refo-corner-cut w-full relative">
-    <div class="refo-corner-cut relative">
-        <div class="absolute top-0 left-0 z-50">
-            <div class="block relative text-neutral sm:text-white font-bold" style="padding-top: 2px; padding-left: 8px">
-                <small id="Bouncy-Uptempo-Kick-2-time">0s</small>/<small>1s</small>
-            </div>
-
-            <audio id="Bouncy-Uptempo-Kick-2-audio" preload='none'>
-                <source src="https://cdn.bangerly.com/samplesLQ/117.mp3" type="audio/mp3" />
-            </audio>
-        </div>
-
-        <img class="hidden sm:block sm:w-36 md:w-52" src="https://cdn.bangerly.com/usersamplepics/98.jpeg" alt="Bouncy Uptempo Kick 2 waveform"/>
-    </div>
-
-    <div class="card-body flex justify-between flex-col sm:flex-col-reverse z-20">
-        <div class="flex gap-x-4">
-            <img class="w-16 block sm:hidden" src="https://cdn.bangerly.com/usersamplepics/98.jpeg" alt="Bouncy Uptempo Kick 2 waveform"/>
-
-            <div class="flex gap-x-4 items-center">
-                <button id="Bouncy-Uptempo-Kick-2-button">
-                    <svg viewBox="0 0 24 24" class="w-5 sm:w-7 md:w-5 lg:w-8 xl:w-6" xmlns="http://www.w3.org/2000/svg">
-                        <path class="fill-accent" fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 10.9648 22.4695 9.92953 21.4086 9.35258L8.59661 2.38548C6.53435 1.26402 4 2.72368 4 5.0329L4 12H23Z"></path>
-                        <path class="fill-secondary" d="M8.59662 21.6145L21.4086 14.6474C22.4695 14.0705 23 13.0352 23 12H4L4 18.9671C4 21.2763 6.53435 22.736 8.59662 21.6145Z"></path>
-                    </svg>
-                </button>
-
-                <a href="https://bangerly.com/communitycontent/samples/118-wavy_chords_dry">
-                    <svg viewBox="0 0 24 24" class="w-5 sm:w-7 md:w-5 lg:w-8 xl:w-6" xmlns="http://www.w3.org/2000/svg">
-                        <path class="fill-primary" d="M2 12C2 13.6394 2.42496 14.1915 3.27489 15.2957C4.97196 17.5004 7.81811 20 12 20C16.1819 20 19.028 17.5004 20.7251 15.2957C21.575 14.1915 22 13.6394 22 12C22 10.3606 21.575 9.80853 20.7251 8.70433C19.028 6.49956 16.1819 4 12 4C7.81811 4 4.97196 6.49956 3.27489 8.70433C2.42496 9.80853 2 10.3606 2 12Z"></path>
-                        <path class="fill-black" opacity="0.33" fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-        <h6 class="font-semibold text-xs sm:text-base md:text-xs lg:text-sm xl:!text-xs">Bouncy Uptempo Kick 2 test test</h6>
-    </div>
-</div>
-
-<script>
-    setAudioHandler("Bouncy-Uptempo-Kick-2");
-</script>
-                    </div>
-
-                    <div class="drop-shadow-xl block col-span-6 md:col-span-5 lg:col-span-4 xl:col-span-2 md:col-start-3">
-                        <div class="card card-side bg-base-100 rounded-none refo-corner-cut w-full relative">
-    <div class="refo-corner-cut relative">
-        <div class="absolute top-0 left-0 z-50">
-            <div class="block relative text-neutral sm:text-white font-bold" style="padding-top: 2px; padding-left: 8px">
-                <small id="Bouncy-Uptempo-Kick-3-time">0s</small>/<small>1s</small>
-            </div>
-
-            <audio id="Bouncy-Uptempo-Kick-3-audio" preload='none'>
-                <source src="https://cdn.bangerly.com/samplesLQ/116.mp3" type="audio/mp3" />
-            </audio>
-        </div>
-
-        <img class="hidden sm:block sm:w-36 md:w-52" src="https://cdn.bangerly.com/usersamplepics/103.jpeg" alt="Bouncy Uptempo Kick 3 waveform"/>
-    </div>
-
-    <div class="card-body flex justify-between flex-col sm:flex-col-reverse z-20">
-        <div class="flex gap-x-4">
-            <img class="w-16 block sm:hidden" src="https://cdn.bangerly.com/usersamplepics/103.jpeg" alt="Bouncy Uptempo Kick 3 waveform"/>
-
-            <div class="flex gap-x-4 items-center">
-                <button id="Bouncy-Uptempo-Kick-3-button">
-                    <svg viewBox="0 0 24 24" class="w-5 sm:w-7 md:w-5 lg:w-8 xl:w-6" xmlns="http://www.w3.org/2000/svg">
-                        <path class="fill-accent" fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 10.9648 22.4695 9.92953 21.4086 9.35258L8.59661 2.38548C6.53435 1.26402 4 2.72368 4 5.0329L4 12H23Z"></path>
-                        <path class="fill-secondary" d="M8.59662 21.6145L21.4086 14.6474C22.4695 14.0705 23 13.0352 23 12H4L4 18.9671C4 21.2763 6.53435 22.736 8.59662 21.6145Z"></path>
-                    </svg>
-                </button>
-
-                <a href="https://bangerly.com/communitycontent/samples/118-wavy_chords_dry">
-                    <svg viewBox="0 0 24 24" class="w-5 sm:w-7 md:w-5 lg:w-8 xl:w-6" xmlns="http://www.w3.org/2000/svg">
-                        <path class="fill-primary" d="M2 12C2 13.6394 2.42496 14.1915 3.27489 15.2957C4.97196 17.5004 7.81811 20 12 20C16.1819 20 19.028 17.5004 20.7251 15.2957C21.575 14.1915 22 13.6394 22 12C22 10.3606 21.575 9.80853 20.7251 8.70433C19.028 6.49956 16.1819 4 12 4C7.81811 4 4.97196 6.49956 3.27489 8.70433C2.42496 9.80853 2 10.3606 2 12Z"></path>
-                        <path class="fill-black" opacity="0.33" fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-        <h6 class="font-semibold text-xs sm:text-base md:text-xs lg:text-sm xl:!text-xs">Bouncy Uptempo Kick 3 test test</h6>
-    </div>
-</div>
-
-<script>
-    setAudioHandler("Bouncy-Uptempo-Kick-3");
-</script>
-                    </div>
-
-                    <div class="drop-shadow-xl block rounded-none col-span-6 md:col-span-5 lg:col-span-4 xl:col-span-2 md:col-start-5 lg:col-start-3">
-                        <div class="card card-side bg-base-100 rounded-none refo-corner-cut w-full relative">
-    <div class="refo-corner-cut relative">
-        <div class="absolute top-0 left-0 z-50">
-            <div class="block relative text-neutral sm:text-white font-bold" style="padding-top: 2px; padding-left: 8px">
-                <small id="Bouncy-Uptempo-Kick-4-time">0s</small>/<small>5s</small>
-            </div>
-
-            <audio id="Bouncy-Uptempo-Kick-4-audio" preload='none'>
-                <source src="https://cdn.bangerly.com/samplesLQ/115.mp3" type="audio/mp3" />
-            </audio>
-        </div>
-
-        <img class="hidden sm:block sm:w-36 md:w-52" src="https://cdn.bangerly.com/usersamplepics/98.jpeg" alt="Bouncy Uptempo Kick 4 waveform"/>
-    </div>
-
-    <div class="card-body flex justify-between flex-col sm:flex-col-reverse z-20">
-        <div class="flex gap-x-4">
-            <img class="w-16 block sm:hidden" src="https://cdn.bangerly.com/usersamplepics/98.jpeg" alt="Bouncy Uptempo Kick 4 waveform"/>
-
-            <div class="flex gap-x-4 items-center">
-                <button id="Bouncy-Uptempo-Kick-4-button">
-                    <svg viewBox="0 0 24 24" class="w-5 sm:w-7 md:w-5 lg:w-8 xl:w-6" xmlns="http://www.w3.org/2000/svg">
-                        <path class="fill-accent" fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 10.9648 22.4695 9.92953 21.4086 9.35258L8.59661 2.38548C6.53435 1.26402 4 2.72368 4 5.0329L4 12H23Z"></path>
-                        <path class="fill-secondary" d="M8.59662 21.6145L21.4086 14.6474C22.4695 14.0705 23 13.0352 23 12H4L4 18.9671C4 21.2763 6.53435 22.736 8.59662 21.6145Z"></path>
-                    </svg>
-                </button>
-
-                <a href="https://bangerly.com/communitycontent/samples/118-wavy_chords_dry">
-                    <svg viewBox="0 0 24 24" class="w-5 sm:w-7 md:w-5 lg:w-8 xl:w-6" xmlns="http://www.w3.org/2000/svg">
-                        <path class="fill-primary" d="M2 12C2 13.6394 2.42496 14.1915 3.27489 15.2957C4.97196 17.5004 7.81811 20 12 20C16.1819 20 19.028 17.5004 20.7251 15.2957C21.575 14.1915 22 13.6394 22 12C22 10.3606 21.575 9.80853 20.7251 8.70433C19.028 6.49956 16.1819 4 12 4C7.81811 4 4.97196 6.49956 3.27489 8.70433C2.42496 9.80853 2 10.3606 2 12Z"></path>
-                        <path class="fill-black" opacity="0.33" fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-        <h6 class="font-semibold text-xs sm:text-base md:text-xs lg:text-sm xl:!text-xs">Bouncy Uptempo Kick 4 test test</h6>
-    </div>
-</div>
-
-<script>
-    setAudioHandler("Bouncy-Uptempo-Kick-4");
-</script>
-                    </div>
-
+                    <p class="mt-16">
+                        Yeah well, I have my own online music platform, but it is going through a major update.
+                        This section will be updated once it is ready (again).
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    
     <div class="flex z-10 relative">
         <div class="h-2 bg-primary w-1/3 refo-skew-negative"></div>
         <div class="h-2 bg-secondary w-1/3 refo-skew-negative"></div>
@@ -544,8 +377,8 @@
     </div>
 
     <section id="track-section" class="bg-slate-600 relative overflow-hidden" style="z-index: 1">
-        <img id="geese-rave-img" class="h-full absolute w-screen object-cover opacity-50"
-             src="/assets/images/geese_rave.webp" alt="image of raving geese" style="z-index: 0">
+        <img id="geese-rave-img" class="h-full absolute w-screen object-cover opacity-75 grayscale-[33%] hue-rotate-[20deg]"
+             src="/assets/images/defqon1.jpg" alt="defqon 1" style="z-index: 0">
 
         <div class="py-32 container mx-auto px-16 relative text-white">
             <p class="text-3xl sm:text-5xl font-black text-center refo-font">PREPARE FOR <span class="text-black text-outline-primary">THE</span> <span class="text-black text-outline-secondary">ZAAG</span> <span class="text-black text-outline-accent">APOCALYPSE</span>!</p>
@@ -553,28 +386,13 @@
 
             <div class="grid grid-cols-1 xl:grid-cols-2 mt-16 gap-16">
                 <div>
-                    <iframe width="100%" height="166" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1796105572&color=%23e4f03e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-<div class="mt-2" style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-    <a href="https://soundcloud.com/refocore" title="REFOCORE" target="_blank" class="font-black text-white">REFOCORE</a> · <a class="font-bold" href="https://soundcloud.com/refocore/el-sonidito-refocore-uptempo-remix" title="Hechizeros Band - El Sonidito (Refocore Remix)" target="_blank" style="color: #e4f03e; text-decoration: none;">Hechizeros Band - El Sonidito (Refocore Remix)</a>
-</div>
-                </div>
+                    <iframe width="100%" height="166" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1976147643&color=%23e4f03e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>                </div>
 
                 <div>
-                    <iframe width="100%" height="166" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1834758972&color=%233ef0ea&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-<div class="mt-2" style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-    <a href="https://soundcloud.com/refocore" title="REFOCORE" target="_blank" class="font-black text-white">REFOCORE</a> · <a class="font-bold" href="https://soundcloud.com/refocore/pointer-sisters-im-so-excited" title="Pointer Sisters - I&#039;m So Excited (Refocore Remix)" target="_blank" style="color: #3ef0ea; text-decoration: none;">Pointer Sisters - I&#039;m So Excited (Refocore Remix)</a>
-</div>
-                </div>
+                    <iframe width="100%" height="166" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1952789399&color=%233ef0ea&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>                </div>
 
                 <div class="xl:col-span-2">
-                    <iframe width="100%" height="166" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1703137761&color=%23788eff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-<div class="mt-2" style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-    <a href="https://soundcloud.com/refocore" title="REFOCORE" target="_blank" class="font-black text-white">REFOCORE</a> · <a class="font-bold" href="https://soundcloud.com/refocore/flo-rida-right-round-refocore-remix" title="Flo Rida - Right Round (Refocore Remix)" target="_blank" style="color: #788eff; text-decoration: none;">Flo Rida - Right Round (Refocore Remix)</a>
-</div>
-                </div>
+                    <iframe width="100%" height="166" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1703137761&color=%23788eff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>                </div>
             </div>
         </div>
 
@@ -690,14 +508,14 @@
 
                 <ul class="menu w-full !p-0 bg-base-200/30 dark:bg-base-200">
                     <li>
-    <a class="!rounded-none" href="mailto:contact@refocore.top" target="_blank" rel="noopener">
+    <a class="!rounded-none" href="mailto:info@refocore.top" target="_blank" rel="noopener">
         <img width="20" height="20" loading="lazy" class="dark:invert rounded-sm !w-5 h-5 !min-w-5" style="max-width: 20px !important;"
              src="/assets/images/signature_tiny.jpg" alt="refocore logo">
-        Email to contact@refocore.top
+        Email to info@refocore.top
     </a>
 </li>
 <li>
-    <a class="!rounded-none" target="_blank" rel="noopener">
+    <a class="!rounded-none" target="_blank" rel="noopener" href="https://www.instagram.com/refo.core">
         <div class="inline-block w-5 h-5">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" class="w-full">
     <rect width="512" height="512" rx="15%" id="b"></rect>
@@ -723,7 +541,7 @@
     </a>
 </li>
 <li>
-    <a class="!rounded-none" target="_blank" rel="noopener">
+    <a class="!rounded-none" target="_blank" rel="noopener" href="https://www.tiktok.com/@refocore">
         <div class="inline-block w-5 h-5">
             <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" class="w-full">
     <path d="M25 0h200c13.808 0 25 11.192 25 25v200c0 13.808-11.192 25-25 25H25c-13.808 0-25-11.192-25-25V25C0 11.192 11.192 0 25 0z"
@@ -749,7 +567,7 @@
     </a>
 </li>
 <li>
-    <a class="!rounded-none" target="_blank" rel="noopener">
+    <a class="!rounded-none" target="_blank" rel="noopener" href="https://soundcloud.com/refocore">
         <div class="inline-block w-5 h-5">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 512 512">
     <rect width="512" height="512" rx="15%" fill="#f50"></rect>
@@ -773,7 +591,7 @@
     <path d="m59 270-3 22 3 22c0 2 3 2 3 0l3-22-3-22c0-3-3-3-3 0zm18-14c0-3-3-3-3 0l-5 36 4 35c0 3 4 3 4 0l4-35zm59-30-3 66 2 40c0 8 7 8 7 0l4-40-4-66c0-5-6-5-6 0zm-31 22-4 44 3 40c0 6 5 6 5 0l4-40-4-44c0-3-4-3-4 0zm70 84 3-40-3-88c0-6-7-6-7 0l-3 88 2 40c0 8 8 8 8 0zm68 0 2-40-2-102c0-7-10-7-10 0l-2 102 2 40c0 8 10 8 10 0zm-34 0 3-40-3-89c0-6-9-6-9 0l-2 89 2 40c0 8 9 8 9 0zm-83 0 3-40-3-41c0-3-6-3-6 0l-3 41 3 40c0 7 6 7 6 0zm-33 0 4-40-4-43c0-3-4-3-4 0l-4 43 4 40c0 4 4 4 4 0zm124-125-2 85 1 40c0 8 10 8 10 0l2-40-2-85c0-7-9-7-9 0zm-58 125 3-40-3-81c0-6-7-6-7 0l-3 81 2 40c0 8 8 8 8 0zm33 0 3-40-3-91c0-6-8-6-8 0l-3 91 3 40c0 8 8 8 8 0zm196-89c-5-57-64-94-118-73-4 2-5 3-5 6v156c0 3 2 6 5 6h137c27 0 49-22 49-49 0-37-35-57-68-46zm-138-62-3 111 3 40c0 8 10 8 10 0l3-40-3-111c0-7-10-7-10 0z" fill="#ffffff"></path>
 </svg>
 </a>
-<a class="w-8 sm:w-10 md:w-8 lg:w-10 xl:w-12"  aria-label="Spotify" target="_blank" rel="noopener">
+<a class="w-8 sm:w-10 md:w-8 lg:w-10 xl:w-12" href="https://open.spotify.com/artist/0bXQrjnqNy5m6o2g1iGWlj" aria-label="Spotify" target="_blank" rel="noopener">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 512 512">
     <rect width="512" height="512" rx="15%" fill="#3bd75f"></rect>
     <circle cx="256" cy="256" fill="#ffffff" r="192"></circle>
