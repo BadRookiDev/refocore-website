@@ -42,7 +42,10 @@ description: "Get to know the style of music I make: Uplifting melodies, Heavy Z
     </section>
 
     <script>
-        function downloadFile(fileUrl) {
+        function downloadFile(fileUrl, id) {
+            const dlmsg = document.getElementById(id + "-dl-msg");
+            dlmsg.classList.remove('hidden');
+
             fetch(fileUrl)
                 .then(response => {
                     if (!response.ok) {
@@ -58,9 +61,13 @@ description: "Get to know the style of music I make: Uplifting melodies, Heavy Z
                     document.body.appendChild(a);
                     a.click();
                     document.body.removeChild(a);
+
+                    dlmsg.classList.add('hidden');
                 })
                 .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
+                    dlmsg.classList.add('hidden');
+                    alert("An error occurred while downloading the file. Please try again later.");
+                    console.error(error);
                 });
         }
     </script>
