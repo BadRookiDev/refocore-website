@@ -1,7 +1,7 @@
 ---
 extends: _layouts.main
-title: "Refocore ✝ My Style"
-description: "Get to know the style of music I make: Uplifting melodies, Heavy Zaagkicks."
+title: "Refocore ✝ Downloads"
+description: "Download and/or Buy my tracks here!"
 ---
 
 @section('body')
@@ -31,44 +31,106 @@ description: "Get to know the style of music I make: Uplifting melodies, Heavy Z
         <div class="relative bg-base-200/20 dark:bg-base-200">
             <div class="py-32 container mx-auto px-16 relative">
                 <div class="-mt-32">
-                    @include('_layouts.components.track-download', ['hexColor' => 'e4f03e', 'trackId' => '1976147643', 'downloadBuyUrl' => 'https://s3.eu-central-2.wasabisys.com/cdn.refocore.top/Ditzkickz - Warrior (Refocore Edit).wav', 'isFree' => true, 'id' => 'warrior-edit'])
+                    @include('_layouts.components.track-download', ['colorClass' => 'primary', 'trackId' => '1976147643', 'downloadBuyUrl' => 'https://s3.eu-central-2.wasabisys.com/cdn.refocore.top/Ditzkickz - Warrior (Refocore Edit).wav', 'isFree' => true, 'id' => 'warrior-edit'])
 
-                    @include('_layouts.components.track-download', ['hexColor' => '3ef0ea', 'trackId' => '1952789399', 'downloadBuyUrl' => 'https://hardstyle.com/en/tracks/774e4657-dd54-4a89-92ca-6bda825daeca/jackhammer', 'isFree' => false, 'id' => 'jackhammer'])
+                    @include('_layouts.components.track-download', ['colorClass' => 'secondary', 'trackId' => '1952789399', 'downloadBuyUrl' => 'https://hardstyle.com/en/tracks/774e4657-dd54-4a89-92ca-6bda825daeca/jackhammer', 'isFree' => false, 'id' => 'jackhammer'])
 
-                    @include('_layouts.components.track-download', ['hexColor' => '788eff', 'trackId' => '1703137761', 'downloadBuyUrl' => 'https://s3.eu-central-2.wasabisys.com/cdn.refocore.top/Flo Rida - Right Round (Refocore Remix).mp3', 'isFree' => true, 'id' => 'right-round-remix'])
+                    @include('_layouts.components.track-download', ['colorClass' => 'accent', 'trackId' => '1703137761', 'downloadBuyUrl' => 'https://s3.eu-central-2.wasabisys.com/cdn.refocore.top/Flo Rida - Right Round (Refocore Remix).mp3', 'isFree' => true, 'id' => 'right-round-remix'])
                 </div>
             </div>
         </div>
     </section>
 
     <script>
-        function downloadFile(fileUrl, id) {
-            const dlmsg = document.getElementById(id + "-dl-msg");
-            dlmsg.classList.remove('hidden');
+        function downloadFile(fileUrl, btn) {
+            const btnInner = btn.innerHTML;
+            const targetsParent = btn.parentNode.parentNode;
+
+            openDownload(targetsParent, btn);
 
             fetch(fileUrl)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
-                    return response.blob();
+
+                    const contentLength = response.headers.get('Content-Length');
+                    if (!contentLength) {
+                        throw new Error('Content-Length header is not available');
+                    }
+
+                    const totalBytes = parseInt(contentLength, 10);
+                    let loadedBytes = 0;
+
+                    const reader = response.body.getReader();
+                    const stream = new ReadableStream({
+                        start(controller) {
+                            function pump() {
+                                reader.read().then(({ done, value }) => {
+                                    if (done) {
+                                        controller.close();
+                                        return;
+                                    }
+
+                                    loadedBytes += value.byteLength;
+                                    const percent = ((loadedBytes / totalBytes) * 100).toFixed(0);
+
+                                    // Update progress in the UI
+                                    console.log(`Download progress: ${percent}%`);
+                                    controller.enqueue(value);
+
+                                    progressDownload(targetsParent, btn, percent);
+                                    pump();
+                                }).catch(error => {
+                                    console.error('Error reading data stream:', error);
+                                    controller.error(error);
+                                });
+                            }
+                            pump();
+                        }
+                    });
+
+                    return new Response(stream).blob();
                 })
                 .then(blob => {
+                    const fileName = fileUrl.split('/').pop();
+
                     // Create a link element
                     const a = document.createElement("a");
                     a.href = URL.createObjectURL(blob);
-                    a.download = fileUrl.split('/').pop();
+                    a.download = fileName;
                     document.body.appendChild(a);
                     a.click();
                     document.body.removeChild(a);
 
-                    dlmsg.classList.add('hidden');
+                    closeDownload(targetsParent, btn, btnInner);
                 })
                 .catch(error => {
-                    dlmsg.classList.add('hidden');
+                    closeDownload(targetsParent, btn, btnInner);
+
                     alert("An error occurred while downloading the file. Please try again later.");
                     console.error(error);
                 });
+        }
+
+        function progressDownload(parent, btn, percent){
+            parent.children[2].value = ""+percent;
+            btn.innerHTML = percent + "%";
+        }
+
+        function openDownload(parent, btn){
+            parent.children[1].classList.remove("sm:block");
+            parent.children[2].classList.remove("hidden");
+            btn.disabled = true;
+            btn.innerHTML = "0%";
+        }
+
+        function closeDownload(parent, btn, btnInner){
+            parent.children[1].classList.add("sm:block");
+            parent.children[2].classList.add("hidden");
+            parent.children[2].value = "0";
+            btn.disabled = false;
+            btn.innerHTML = btnInner;
         }
     </script>
 @endsection

@@ -1,15 +1,19 @@
+@php
+    $colorClassHexMap = [
+        'primary' => 'e4f03e',
+        'secondary' => '3ef0ea',
+        'accent' => '788eff',
+    ];
+@endphp
+
 <div class="pt-32 -mt-16" id="{{ $id }}">
     <div class="flex w-full gap-8 flex-wrap sm:flex-nowrap">
         <div class="w-full sm:w-1/2 md:w-2/3 lg:w-3/4 flex-shrink-0">
-            @include('_layouts.components.soundcloud', ['hexColor' => $hexColor, 'trackId' => $trackId])
-
-            <p id="{{ $id."-dl-msg" }}" class="hidden mt-2 font-semibold mb-0" style="color: {{ '#'.$hexColor }}">
-                Your download has started, please wait and have patience!
-            </p>
+            @include('_layouts.components.soundcloud', ['hexColor' => $colorClassHexMap[$colorClass], 'trackId' => $trackId])
         </div>
 
         <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-            <div class="w-full h-full rounded-sm px-4 bg-base-100 flex items-center drop-shadow-md"
+            <div class="w-full h-full rounded-sm px-4 py-4 sm:py-0 bg-base-100 flex items-center drop-shadow-md"
                  style="transition: height 300ms ease-in-out">
                 <div class="w-full flex items-center justify-center sm:block">
                     <p class="text-center font-black text-lg sm:w-full flex-shrink me-4 sm:me-0">
@@ -20,11 +24,13 @@
                         @endif
                     </p>
 
-                    <hr class="hidden sm:block my-4 border-t-2 border-t-base-300">
+                    <hr class="hidden sm:block my-4 border-t-2 border-t-base-300 progress-primary progress-secondary progress-accent">
+                    <progress class="hidden progress {{ 'progress-'.$colorClass }} w-8 sm:w-full my-4 !h-0.5 me-4 sm:me-0"
+                              value="0" max="100"></progress>
 
                     <div class="inline-block sm:w-full">
-                        <button class="sm:w-full p-2 rounded-full sm:mt-2" onclick="downloadFile('{{ $downloadBuyUrl }}', '{{ $id }}')"
-                                style="background: {{ '#'.$hexColor }}">
+                        <button class="sm:w-full p-2 rounded-full sm:mt-2 text-black font-semibold" onclick="downloadFile('{{ $downloadBuyUrl }}', this)"
+                                style="background: {{ '#'.$colorClassHexMap[$colorClass] }}">
                             @if($isFree)
                                 <svg viewBox="0 0 24 24" class="w-6 fill-black opacity-70 mx-auto"
                                      xmlns="http://www.w3.org/2000/svg">
