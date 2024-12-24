@@ -39,7 +39,7 @@
                                     </svg>
                             </button>
                         @else
-                            <a class="sm:w-full p-2 rounded-full sm:mt-2 text-black font-semibold" href="{{ $downloadBuyUrl }}"
+                            <a class="sm:w-full p-2 rounded-full sm:mt-2 text-black font-semibold block" href="{{ $downloadBuyUrl }}"
                                     style="background: {{ '#'.$colorClassHexMap[$colorClass] }}" target="_blank">
                                 <svg class="w-6 fill-black opacity-70 mx-auto" viewBox="0 -32 576 576"
                                      xmlns="http://www.w3.org/2000/svg">
