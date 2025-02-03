@@ -31,6 +31,8 @@ description: "Download and/or Buy my tracks here!"
         <div class="relative bg-base-200/20 dark:bg-base-200">
             <div class="py-32 container mx-auto px-16 relative">
                 <div class="-mt-32">
+                    @include('_layouts.components.track-download', ['colorClass' => 'secondary', 'trackId' => '2024928676', 'downloadBuyUrl' => 'https://s3.eu-central-2.wasabisys.com/cdn.refocore.top/Refocore - Loodsrave 4 Anthem (ft. MatDc) (extended version).wav', 'isFree' => true, 'id' => 'loodsrave-4'])
+
                     @include('_layouts.components.track-download', ['colorClass' => 'accent', 'trackId' => '1973112579', 'downloadBuyUrl' => 'https://hardstyle.com/en/tracks/24a4945e-18ef-4bfd-b12c-a5c8787ed480/dump-truck', 'isFree' => false, 'id' => 'dump-truck'])
 
                     @include('_layouts.components.track-download', ['colorClass' => 'primary', 'trackId' => '1976147643', 'downloadBuyUrl' => 'https://s3.eu-central-2.wasabisys.com/cdn.refocore.top/Ditzkickz - Warrior (Refocore Edit).wav', 'isFree' => true, 'id' => 'warrior-edit'])
