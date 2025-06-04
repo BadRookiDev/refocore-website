@@ -31,6 +31,8 @@ description: "Download and/or Buy my tracks here!"
         <div class="relative bg-base-200/20 dark:bg-base-200">
             <div class="py-32 container mx-auto px-16 relative">
                 <div class="-mt-32">
+                    @include('_layouts.components.track-download', ['colorClass' => 'secondary', 'trackId' => '2104280895', 'downloadBuyUrl' => 'https://s3.eu-central-2.wasabisys.com/cdn.refocore.top/Maroon 5 ft. Christina Aguilera - Moves like jagger (Refocore Remix).mp3', 'isFree' => true, 'id' => 'moves-like-jagger'])
+
                     @include('_layouts.components.track-download', ['colorClass' => 'accent', 'trackId' => '2044242380', 'downloadBuyUrl' => 'https://hardstyle.com/en/tracks/90eda8b2-110b-4469-96e2-be7cab319c9f/anvil', 'isFree' => false, 'id' => 'anvil'])
 
                     @include('_layouts.components.track-download', ['colorClass' => 'primary', 'trackId' => '2035885916', 'downloadBuyUrl' => 'https://s3.eu-central-2.wasabisys.com/cdn.refocore.top/Martin Garrix - Animals (Refocore Remix).wav', 'isFree' => true, 'id' => 'animals-remix'])
